@@ -1,0 +1,56 @@
+html{
+    background-color: rgb(12, 14, 19);
+}
+
+
+nav ,nav > ul{
+    display: flex;
+    margin: 5px 0px;
+    padding: 5px;
+}
+nav{
+    justify-content: space-between;
+    margin: 20px;
+
+}
+
+nav li {
+    display: flex; 
+    margin: 5px;
+    padding: 5px; 
+    border: 1px outset ;
+    color:#000;
+    background-color: #c7d3da;
+ 
+    text-decoration: none ;
+    cursor: pointer; 
+    border-radius: 7px;
+
+}
+
+a {
+    text-decoration: none ;
+    color:#000;
+
+}
+
+section{
+    padding: 30px;
+}
+div{
+    display: flex;
+    font-size: large;
+    padding: 5px ;
+    margin: 3px;
+    
+}
+p{
+    background-color:#c7d3da;
+    padding: 4px;
+    margin: 0px 3px;
+    width: 70pc;
+}
+ p.title{
+    width: 8pc;
+
+} 

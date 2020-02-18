@@ -1,0 +1,36 @@
+html{
+    background-color: rgb(12, 14, 19);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 5px;
+}
+
+
+
+nav > ul{
+    display: flex;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+nav li {
+    display: flex; 
+    margin: 5px;
+    padding: 5px; 
+    border: 1px outset ;
+    color:#000;
+    background-color: #c7d3da;
+    text-decoration: none ;
+    cursor: pointer; 
+    border-radius: 7px;
+}
+
+
+a {
+    text-decoration: none ;
+    color:#000;
+}

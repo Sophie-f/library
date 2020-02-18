@@ -1,0 +1,96 @@
+html{
+    background-color: rgb(12, 14, 19);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 5px;
+}
+
+nav > ul{
+    display: flex;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+nav li {
+    display: flex; 
+    margin: 5px;
+    padding: 5px; 
+    border: 1px outset ;
+    color:#000;
+    background-color: #c7d3da;
+    text-decoration: none ;
+    cursor: pointer; 
+    border-radius: 7px;
+}
+
+
+a {
+    text-decoration: none ;
+    color:#000;
+}
+
+
+div.main {
+    background-color: #c7d3da;
+    border-radius: 7px;
+    margin: 10px auto; 
+    margin-bottom: 2pc;
+    width: 35pc;
+    height: 30pc auto;
+    padding: 2px;
+}
+
+div.line{
+    border-bottom: rgb(48, 55, 73) solid 1px;
+    padding: 2px;
+    margin: 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 4.5pc;
+
+ 
+}
+#end{
+    border-bottom: 1px;
+
+}
+
+
+
+div.line div{
+    font-size: large;
+    margin: 3px;
+    padding: 6px;
+    width: 25pc;
+    line-height: 4.5pc;
+    vertical-align: middle;
+    
+
+}    
+
+div.line  div.title{
+    font-size: medium;
+    color: rgb(50, 58, 78);
+    width: 15pc;
+
+
+}
+    
+
+a.edit {
+    display: block;
+    padding: 2px;
+    margin: 1px auto;
+    margin-bottom: 2pc ;
+    background-color: #c7d3da;
+    text-decoration: none ;
+    text-align: center;
+    color:#000;
+    width: 30px;
+    cursor: pointer; 
+    border-radius: 5px;
+}

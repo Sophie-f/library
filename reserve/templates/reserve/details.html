@@ -1,0 +1,45 @@
+{% extends "reserve/base.html" %}
+{% load static %}
+
+{%block title%} Details
+{%endblock%}
+
+{%block url%} href="{% static 'reserve/details.css'%}"
+{%endblock%}
+
+{%block content%}
+<div>
+    <p class="title">Title</p>
+    <p>{{object.title}}</p>
+</div>
+
+<div>
+    <p class="title">Authors</p>
+    <p>{% for a in object.authors.all %} {{a.name}}
+        {%empty%}
+        ---
+        {% endfor %}
+    </p>
+</div>
+<div>
+    <p class="title">Publication</p>
+    <p>{{object.publication|default:'---'}}</p>
+</div>
+<div>
+    <p class="title">Edition</p>
+    <p> {{object.edition|default:'---'}}</p>
+
+</div>
+<div>
+    <p class="title">Volume</p>
+    <p> {{object.volume|default:'---'}}</p>
+</div>
+
+<div>
+    <p class="title">publication date</p>
+    <p> {{object.pub_date|default:'---'}}</p>
+</div>
+
+
+
+{%endblock%}

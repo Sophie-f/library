@@ -1,0 +1,104 @@
+html{
+    background-color: rgb(12, 14, 19);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 5px;
+}
+
+nav > ul{
+    display: flex;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+nav li {
+    display: flex; 
+    margin: 5px;
+    padding: 5px; 
+    border: 1px outset ;
+    color:#000;
+    background-color: #c7d3da;
+    text-decoration: none ;
+    cursor: pointer; 
+    border-radius: 7px;
+}
+
+
+a {
+    text-decoration: none ;
+    color:#000;
+}
+
+
+form {
+    border-radius: 7px;
+    margin: 10px auto; 
+    width: 30pc;
+    height: 30pc auto ;
+    padding: 2px;
+    border: #c7d3da solid 1px;
+    
+}
+
+
+
+
+form div{
+    
+
+    margin: 3pc auto; 
+    width: 25pc ;
+            
+}
+
+
+
+form > input {
+
+    margin: 5px auto;
+    display: block;
+
+
+
+}
+
+
+label{
+    padding: 3px;
+    color:#c7d3da;
+    margin:  5px auto;
+}
+input{
+    padding: 3px;
+    margin:  5px auto;
+}
+
+p a{ 
+   
+    color: #c7d3da;
+    margin: 3pc auto;
+    display: block;
+}
+
+
+#submit{
+    cursor: pointer; 
+    border-radius: 7px;
+
+}
+
+
+#error{
+    color: darkred;
+}
+ul.errorlist li{
+    color: darkred;
+}
+
+small{
+    color: #484e52;
+}

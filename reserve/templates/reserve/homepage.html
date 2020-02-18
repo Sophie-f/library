@@ -1,0 +1,22 @@
+{% extends "reserve/base.html" %}
+{% load static %}
+
+{%block url %}href="{% static 'reserve/homepage.css'%}"{% endblock %}
+
+{% block title %}homepage{% endblock %}
+
+{%block content%}
+<figure>
+    <img src=" {% static 'reserve/images/minimal_book.png' %}" alt="book image">
+</figure>
+
+<div>
+    <a href="{%url 'reserve:about'%}">
+        <article class="main welcome">welcome to library</article>
+    </a>
+
+    <a href="{%url 'reserve:search'%}">
+        <article class="main searchbook"> search book</article>
+    </a>
+</div>
+{%endblock%}

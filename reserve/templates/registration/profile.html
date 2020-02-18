@@ -1,0 +1,39 @@
+{% extends "reserve/base.html" %}
+{% load static %}
+
+{%block title%} profile
+{%endblock%}
+
+{%block url%} href="{% static 'reserve/profile.css'%}"
+{%endblock%}
+
+{%block content%}
+<div class="main"> 
+    <div class='line'>
+        <div class="title">Username</div>
+        <div>{{user.username}}</div>
+    </div>
+    <div class='line'>
+        <div class="title">First name</div class="title">
+        <div>{{user.first_name|default:'---'}}</div>
+    </div>
+    <div class='line'>
+        <div class="title">Lastname</div class="title">
+        <div>{{user.last_name|default:'---'}}</div>
+    </div>
+    <div class='line'>
+        <div class="title">Birth date</div class="title">
+        <div>{{user.profile.birth_date|default:'---'}}</div>
+    </div>
+    <div class='line'>
+        <div class="title">Phone number</div class="title">
+        <div>{{user.profile.phone|default:'---'}}</div>
+    </div>
+    <div id="end" class='line'>
+        <div class="title">Email</div class="title">
+        <div>{{user.email}}</div>
+    </div>
+</div>
+<a class="edit" href="{% url 'reserve:edit'%}">edit<a>
+
+{%endblock%}

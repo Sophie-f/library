@@ -1,0 +1,19 @@
+{% extends "reserve/base.html" %}
+{% load static %}
+
+{%block title%} signup down
+{%endblock%}
+
+{%block url%} href="{% static 'reserve/search.css'%}"
+{%endblock%}
+
+{%block content%}
+
+<p class="done">welcome {{username}}</p>
+<a href="{% url 'reserve:profile' %}">
+    <p class="done">Complete profile</p>
+</a>
+<a href="{% url 'reserve:homepage' %}">
+    <p class="done">goto homepage</p>
+</a>
+{%endblock%}

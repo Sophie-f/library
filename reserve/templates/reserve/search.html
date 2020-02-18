@@ -1,0 +1,41 @@
+{% extends "reserve/base.html" %}
+{% load static %}
+
+
+{%block title%} Search
+{%endblock%}
+
+{%block url%} href="{% static 'reserve/search.css'%}"
+{%endblock%}
+
+{%block content%}
+<form action="{% url 'reserve:search' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <input id="submit" type="submit" value="Submit">
+</form>
+
+{% if books %}
+<ul>
+    {% for key in books%}
+
+    <a href="{% url 'reserve:details' key.pk %}">
+        <li id="result">
+            {{key}}
+        </li>
+    </a>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% if not books and method == "POST"%} <p>There are no books with these properties</p> {%endif%}
+
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+{%endblock%}
+
+

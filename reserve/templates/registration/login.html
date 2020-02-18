@@ -1,0 +1,52 @@
+{% extends "reserve/base.html" %}
+{% load static %}
+
+{%block title%} Log in
+{%endblock%}
+
+{%block url%} href="{% static 'reserve/signup.css'%}"
+{%endblock%}
+
+{%block content%}
+
+
+{% if next %}
+{% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+{% else %}
+<p>Please login to see this page.</p>
+{% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'reserve:login' %}">
+    {% csrf_token %}
+{% for field in form%}
+    <div>
+       {{field.label_tag}}
+        {{field}}
+
+    </div>
+{%endfor%}
+    <input id="submit" type="submit" value="login">
+    
+<div>{% if form.errors %}
+    <p id="error">Your username and password didn't match. Please try again.</p>
+    {% endif %}
+    
+    <p><a href="{% url 'reserve:password_reset' %}">Lost password?</a></p>
+   
+</div>
+</form>
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+{%endblock%}
+
+
+
+
+
+
